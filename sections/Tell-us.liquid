@@ -1,0 +1,58 @@
+<div class="tell-us_container">
+  <div class="tell-us_wrapper">
+    <div class="tell-us_content-warpper">
+      <div class="tell-us_image">
+        <img src="{{ section.settings.image }}" alt="image">
+      </div>
+      <div class="tell-us_content">
+        {{ section.settings.content }}
+      </div>
+    </div>
+    <div class="tell-us_button-wrapper">
+      <a href="{{ section.settings.button_url }}">{{ section.settings.button_text }}</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .tell-us_content-warpper{
+    
+  }
+</style>
+{% schema %}
+  {
+    "name": "Tell us",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },
+      {
+        "type":"richtext",
+        "id":"content",
+        "label":"Content"
+      },
+      {
+        "type":"header",
+        "content":"Button Settings"
+      },
+      {
+        "type":"url",
+        "id":"button_url",
+        "label":"Button Url"
+      },
+      {
+        "type":"text",
+        "id":"button_text",
+        "label":"Button Text"
+      }
+    ],
+    "presets":[
+      {
+        "name":"Tell us"
+      }
+    ]
+  }
+{% endschema %}
+
